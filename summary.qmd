@@ -1,5 +1,7 @@
 # Summary
 
+This book is truly interesting and full of joy :)
+
 In summary, this book has no content whatsoever. 
 This is another plain text sentence. 
 **This is a bold face sentence.**
