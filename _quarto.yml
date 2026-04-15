@@ -7,6 +7,10 @@ book:
   date: "18.3.2026"
   chapters:
     - index.qmd
+    - 01_welcome.qmd
+    - 02_modularization.qmd
+    - 03_introduction.qmd
+    - 05_statistics.qmd
     - intro.qmd
     - visualization.qmd
     - summary.qmd

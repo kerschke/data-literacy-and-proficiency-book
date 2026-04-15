@@ -1,0 +1,99 @@
+# Introduction
+
+## What is data?
+
+Data can be understood as a collection of factual elements -- such as numbers, text, or recorded observations -- that represent information about the world. They:
+
+-   can originate from various sources (e.g., public data such as census records, social media, web scraping, ...)\
+-   can have various formats (e.g., quantitative, qualitative, ...)
+-   can be processed and analyzed in order to gather knowledge and/or guide decision making
+
+As data's volume, complexity and importance is growing and digitalization and AI are increasingly shaping our everyday lives (not only across academic disciplines, but also throughout the private sector), **solid data skills are among the key skills of our time!**
+
+![](figures/intro/data3){width="60%" fig-align="center"}
+
+## What are data literacy and data proficiency?
+
+Data literacy and data proficiency are two levels of data capability that enable people to work with data in a meaningful way. There is no unique definition of data literacy and data proficiency in the literature. Data proficiency is sometimes considered a subfield of data literacy or the terms are used interchangeably. The definitions presented below are based on a Canadian study of the Dalhousie University [@ridsdale2015strategies] that was picked up by the German Informatics Society (GI) [@heidrich2018data] and on an article by @wagner25.
+
+**Data literacy** is a set of fundamental skills, that focus on basic understanding, interpreting, and communicating data in context. It comprises:
+
+-   *Conceptual understanding:* understanding different data sources and data collection methods, as well as their inherent limitations; understanding different data types and basic statistical concepts of appropriate evaluation and presentation methods; interpretation of statistics and visualization methods (i.e., recognizing patterns and trends in the data).
+
+-   *Basic technical skills:* knowledge of basic data organization and data (pre-)processing methods and tools.
+
+-   *Critical awareness:* ability to identify non-reliable data sources and data quality issues, and to recognize obvious flaws in data collection, analysis, presentation, and interpretation; it also involves critical questioning of conclusions drawn from data based on the presented evidence, as well as basic knowledge of data ethics.
+
+-   *Communication:* presenting (aggregated) data in an appropriate way and translating results into everyday language that can also be understood by non-specialists; it also involves understanding of data-based explanations provided by others.
+
+**Data proficiency** (sometimes also referred to as **data fluency**) is an advanced level of data capability that builds on data literacy. It focuses on data collection and processing, statistical analysis, and informed decision-making. It comprises:
+
+-   *Methodological understanding:* thorough understanding of statistical concepts and methods that enables users to select appropriate (advanced) statistical methods based on the specific research question; the ability to identify complex patterns and relationships that might remain hidden when using simpler analysis techniques and the ability to identify methodological flaws that might undermine the validity of conclusions drawn from data analyses.
+
+-   *Data analysis skills:* development of data analysis plans and conduct of statistical analyses.
+
+-   *Advanced technical skills:* application of data organization and data (pre-)processing methods and tools; use of software for data science tasks, such as R and Python.
+
+-   *Cross-functional communication:* translating research questions into appropriate data analysis tasks; translating complex statistical findings into action plans.
+
+## From structured to unstructured data
+
+Depending on the requirements and restrictions of the data, one distinguishes between the following three formats:
+
+**Structured data:** This is the most common data type in simple use cases. Structured data are organized in a fixed format, such as rows and columns, and are easier to manipulate and analyze with traditional tools than more complex data types. A drawback is, that they are not very flexible as one has to stick to the given format. Examples are:
+
+-   Spreadsheets (e.g., Excel, Google sheets)
+
+    ![Source: <https://r4ds.hadley.nz/spreadsheets.html>](figures/intro/excel){width="65%" fig-align="center"}
+
+-   Text files (e.g., CSV)
+
+-   Relational data (e.g., SQL)
+
+    ![](figures/intro/sql){width="65%" fig-align="center"}
+
+**Unstructured data:** Unstructured data are not organized in a predefined manner. They often come in complex forms such as text documents, images, and videos. A key advantage is that they offer full flexibility as one is not restricted to a specific format. However, their analysis requires more sophisticated methods, like natural language processing (NLP) and machine learning techniques, as they doesn't easily fit into traditional relational databases. Unstructured data often play a key role in sentiment analysis and complex pattern recognition. Examples are texts and social media (instagram, twitter, etc.).
+
+![](figures/intro/unstructured){width="65%" fig-align="center"}
+
+**Semi-structured data:** Semi-structured data cannot be (directly) stored in a relational database, but have some organizational properties. Often a processed versions of semi-structured data can be stored therein. They are more flexible than structured data, but less flexible than unstructured data. They are widely used in scenarios such as web scraping and data integration. Example are markup languages (such as HTML or XML, or even TeX) and JSON.
+
+![Source: <https://help.seagullscientific.com/2022/en/Content/DB_Types_XML.htm>](figures/intro/XML){width="65%" fig-align="center"}
+
+## Characterizing data {#sec-data}
+
+The aim of any data analysis is usually to draw conclusions about a specific population of interest. We refer to:
+
+-   *population:* entire group of individuals or items that you want to draw conclusions about
+
+-   *sample:* a subset of the population (oftentimes randomly drawn)
+
+    ![Source: <https://www.questionpro.com/blog/population-vs-sample/>](figures/intro/sample){width="55%" fig-align="center"}
+
+-   *unit of analysis:* the primary entity or object of study (e.g., person, object, geographical area,...)
+
+-   *variable / feature / endpoint:* a characteristic of that unit of analysis that is being measured (e.g., age, income, pace,...)
+
+It is often not possible to collect data from the entire population, so a smaller sample is studied instead. Depending on the size, quality and representativeness of the sample, it can be used to infer characteristics of the full population (see @sec-inferential).
+
+Every variable has a data type (i.e., scale of measurement) that determines what kind of data (e.g., text, numbers,...) it can hold. The data type is crucial for choosing the correct data analysis method. We distinguish between the following data types:
+
+**Quantitative data:** Quantitative data represent information that can be counted or measured in numbers. They can be further divided in **discrete** (i.e., countable) data (e.g., number of cigarettes smoked per day, number of cars caught speeding per day) and **continuous** (i.e., uncountable) data (e.g., speed, gas price, body weight) data.
+
+**Qualitative data:** Qualitative data is non-numerical information. They can be further divided in **ordinal** (i.e., ordered categories) data (e.g., ratings on a likert scale, grades, education level) and **nominal** (i.e., uncountable) data (e.g., gender, hair color, nationality) data.
+
+![Source: <https://www.vecteezy.com/vector-art/30821802-4-types-of-data-with-nominal-ordinal-discrete-and-continuous-data>](figures/intro/datatypes2){fig-align="center"}
+
+Note that continuous variables are sometimes measured on a discrete scale (e.g., age in years). Nevertheless, we will usually analyze them as continuous variables. Likewise, discrete variables with many possible outcomes are sometimes analyzed as continuous variables, whereas quantitative variables might be analyzed like categorical ones, when only a few different outcomes are observed. Any continuous variable can be transformed into a categorical one by dividing its outcomes in discrete intervals (discretization). However, this inherently results in a loss of information.
+
+A further characteristic of data is the **data dimennsionality**. We distinguish:
+
+-   *no dimensional* data: no dimensionality available (e.g., graphs or strings)
+
+-   *univariate* feature $X$: one value $x_i$ per observation $i$
+
+-   *bivariate* feature $(X_1, X_2)$: two values $(x_{i1}, x_{i2})$ per observation $i$
+
+-   *multivariate* feature $(X_1,\ldots,X_p)$: multiple values $(x_{i1},\ldots,x_{ip})$ per observation $i$
+
+-   *high-dimensional* data: multivariate feature with large $p$
