@@ -1,0 +1,5 @@
+# Welcome
+
+Digitalization and AI are increasingly shaping our everyday lives. Since these are based on data-driven processes, solid data skills -- such as critically questioning data-driven results (data literacy) and the ability to handle them practically and technically (data proficiency) -- are among the key skills of our time.
+
+The HowTUData project is an innovative, versatile, accessible, two-stage learning and teaching scenario to promote data literacy and proficiency skills, which can be used regardless of subject area, qualification level (bachelor's, master's, doctorate), or other learner groupings. We provide two consecutive courses: an introductory course in data literacy, which teaches basic skills in handling and interpreting data, and an application-oriented advanced course in data proficiency, which focuses on methodological skills in handling (open) data. We are guided by the UN Sustainable Development Goals (SDGs) in our selection of case studies for analysis. The courses include both lecture elements and interactive exercises.

@@ -1,0 +1,7 @@
+# How this course is organized
+
+The course is organized along the data lifecycle. It comprises the following modules:
+
+-   ...
+
+Each module consists of a lecture part and an exercise part. There are always high-level components that focus on understanding without programming requirements. Some modules also include advanced components that go more into depth and also involve programming.
